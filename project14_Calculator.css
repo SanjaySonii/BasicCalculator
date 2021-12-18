@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 20rem;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 12px solid rgb(187, 255, 0);
+    border-radius: 2rem;
+}
+h2{
+    display: block;
+    width: 40%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: underline red;
+    margin: auto;
+    text-align: center;
+} 
+hr{
+    /* width: 20rem; */
+     height: .1rem;
+    background-color: burlywood;
+    }
+ 
+.container .calSpace{
+    width: 100%;
+    font-size: 3rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 10rem;
+    justify-content:end;
+    text-align: right;
+}
+.container .calDiv{
+display: flex;
+}
+.number{
+    font-size: x-large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: .45rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    border: white;
+    background: none;
+}
+.number:hover{
+    background-color: whitesmoke;
+    border: whitesmoke;
+}
+.yellow{
+    color: orange;
+}
+#equal{
+    background-color: orange
+}
+.mode{
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    background-color: none;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.display1{
+    display: none;
+}
+.night{
+    background-color: black;
+color: white;
+}
