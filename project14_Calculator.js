@@ -1,5 +1,4 @@
 let math = Math;
-console.log(math.E)
 var calSpace = document.getElementById(`calSpace`);
 var container = document.querySelector(`.container`);
 var digit = document.querySelectorAll(`.digit`);
@@ -63,13 +62,13 @@ backSpace.addEventListener(`click`, (e) => {
         calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
     }
 })
-
 one.addEventListener(`click`, (e) => {
     e.preventDefault();
     if (calSpace.innerText == 0) {
         calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
         calSpace.innerText = calSpace.innerText + '1';
-    } else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
+    }
+     else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
     else {
         if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
         calSpace.innerText = calSpace.innerText + '1';
@@ -80,7 +79,8 @@ two.addEventListener(`click`, (e) => {
     if (calSpace.innerText == 0) {
         calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
         calSpace.innerText = calSpace.innerText + '2';
-    } else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
+    }
+     else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
     else {
         if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
         calSpace.innerText = calSpace.innerText + '2';
@@ -91,7 +91,8 @@ three.addEventListener(`click`, (e) => {
     if (calSpace.innerText == 0) {
         calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
         calSpace.innerText = calSpace.innerText + '3';
-    } else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
+    }
+    else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
     else {
         if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
         calSpace.innerText = calSpace.innerText + '3';
@@ -102,7 +103,8 @@ four.addEventListener(`click`, (e) => {
     if (calSpace.innerText == 0) {
         calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
         calSpace.innerText = calSpace.innerText + '4';
-    } else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
+    }
+    else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
     else {
         if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
         calSpace.innerText = calSpace.innerText + '4';
@@ -113,7 +115,8 @@ five.addEventListener(`click`, (e) => {
     if (calSpace.innerText == 0) {
         calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
         calSpace.innerText = calSpace.innerText + '5';
-    } else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
+    }
+    else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
     else {
         if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
         calSpace.innerText = calSpace.innerText + '5';
@@ -124,7 +127,8 @@ six.addEventListener(`click`, (e) => {
     if (calSpace.innerText == 0) {
         calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
         calSpace.innerText = calSpace.innerText + '6';
-    } else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
+    }
+     else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
     else {
         if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
         calSpace.innerText = calSpace.innerText + '6';
@@ -135,7 +139,8 @@ seven.addEventListener(`click`, (e) => {
     if (calSpace.innerText == 0) {
         calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
         calSpace.innerText = calSpace.innerText + '7';
-    } else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
+    }
+    else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
     else {
         if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
         calSpace.innerText = calSpace.innerText + '7';
@@ -146,7 +151,8 @@ eight.addEventListener(`click`, (e) => {
     if (calSpace.innerText == 0) {
         calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
         calSpace.innerText = calSpace.innerText + '8';
-    } else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
+    }
+     else if (calSpace.innerText == 'e') { calSpace.innerText = 'error'; }
     else {
         if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
         calSpace.innerText = calSpace.innerText + '8';
@@ -196,6 +202,25 @@ exp.addEventListener(`click`, (e) => {
     else {
         if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
         calSpace.innerText = calSpace.innerText + 'e';
+    }
+})
+percentage.addEventListener(`click`, (e) => {
+    e.preventDefault();
+    if (calSpace.innerText.endsWith('%')) {
+    }
+    if (calSpace.innerText.includes('e')) {
+        calSpace.innerText = calSpace.innerText.replace('e', '0.0271828');
+    }
+    else if (calSpace.innerText == 0) {
+        calSpace.innerText = '0';
+    }
+    else if (calSpace.innerText.endsWith('.') || calSpace.innerText.endsWith('-') || calSpace.innerText.endsWith('x') || calSpace.innerText.endsWith('+') || calSpace.innerText.endsWith('/')) {
+        calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
+        calSpace.innerText = calSpace.innerText + '%';
+    }
+    else {
+        if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
+        calSpace.innerText = String(Number(calSpace.innerText[calSpace.innerText.length - 1]) * 0.01);
     }
 })
 add.addEventListener(`click`, (e) => {
@@ -250,33 +275,22 @@ divide.addEventListener(`click`, (e) => {
         calSpace.innerText = calSpace.innerText + '/';
     }
 })
-percentage.addEventListener(`click`, (e) => {
-    e.preventDefault();
-    if (calSpace.innerText.endsWith('%')) {
-    }
-    if (calSpace.innerText.includes('e')) {
-        calSpace.innerText = calSpace.innerText.replace('e', '0.0271828');
-    }
-    else if (calSpace.innerText == 0) {
-        calSpace.innerText = '0';
-    }
-    else if (calSpace.innerText.endsWith('.') || calSpace.innerText.endsWith('-') || calSpace.innerText.endsWith('x') || calSpace.innerText.endsWith('+') || calSpace.innerText.endsWith('/')) {
-        calSpace.innerText = calSpace.innerText.slice(0, calSpace.innerText.length - 1);
-        calSpace.innerText = calSpace.innerText + '%';
-    }
-    else {
-        if (calSpace.innerText.length >= 10) { calSpace.style.fontSize = "2rem"; }
-        calSpace.innerText = String(Number(calSpace.innerText[calSpace.innerText.length - 1]) * 0.01);
-    }
-})
-
 equal.addEventListener(`click`, (e) => {
     calVar = calSpace.innerText;
     if (calVar.includes("x")) {
-        calVar = calVar.replace('x', '*');
+        let reg = /x/g;
+        let l = calVar.match(reg).length;
+        for (let i = 0; i <= l - 1; i++) {
+            calVar = calVar.replace("x", "*");
+        }
     }
     if (calVar.includes("e")) {
-        calVar = calVar.replace('e', '2.71828');
+        let reg = /e/g;
+        let l = calVar.match(reg).length;
+        for (let i = 0; i <= l - 1; i++) {
+            calVar = calVar.replace('e','2.71828');
+        }
     }
+    
     calSpace.innerText = eval(calVar);
 })
