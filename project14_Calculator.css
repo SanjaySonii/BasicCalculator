@@ -3,6 +3,8 @@
     padding: 0;
 }
 .container{
+    background-color: rgba(125, 128, 129, 0.945);
+    color: aliceblue;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -49,9 +51,11 @@ display: flex;
     border-radius: 2rem;
     border: white;
     background: none;
+    color: aliceblue;
+
 }
 .number:hover{
-    background-color: whitesmoke;
+    background-color: rgb(141, 138, 138);
     border: whitesmoke;
 }
 .yellow{
@@ -77,6 +81,6 @@ display: flex;
     display: none;
 }
 .night{
-    background-color: black;
-color: white;
+    background-color: rgb(105, 84, 84);
+color: rgb(242, 250, 128);
 }
